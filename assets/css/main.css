@@ -3904,7 +3904,7 @@ body {
 
 body {
     position: relative;
-    min-width: 400px;
+    
     font-family: "Circe", sans-serif;
     font-size: 1rem;
     line-height: 1.5;
@@ -4000,6 +4000,9 @@ a:hover {
     position: relative;
     z-index: 2;
 }
+.video-wrapper{
+    line-height: 0;
+}
 
 .firstscreen {
     position: relative;
@@ -4049,12 +4052,16 @@ a:hover {
 
 @media (max-width: 767.98px) {
     .section-1 {
-        padding: 6.875rem 0 4.6875rem;
+        padding: 3rem 0;
     }
 }
 
+.section-2{
+    padding:0; 
+}
+
 .section-3 {
-    padding: 7.1875rem 0 3.125rem;
+    padding: 7.8125rem 0;
 }
 
 @media (max-width: 767.98px) {
@@ -4088,17 +4095,17 @@ a:hover {
 
 @media (max-width: 767.98px) {
     .section-5 {
-        padding: 6.875rem 0;
+        padding: 3rem 0;
     }
 }
 
 .section-6 {
-    padding: 0 0 7.8125rem;
+    padding: 7.8125rem 0;
 }
 
 @media (max-width: 767.98px) {
     .section-6 {
-        padding: 0 0 6.875rem;
+        padding: 3rem 0;
     }
 }
 
@@ -4216,6 +4223,7 @@ a:hover {
 .button.link-fill {
     background-color: #fd1616;
 }
+
 
 .logo {
     display: inline-block;
@@ -4360,7 +4368,7 @@ header.sticky .logoLight {
     padding: 0;
 }
 
-.contenblock.center {
+.center {
     text-align: center;
 }
 
@@ -4372,6 +4380,9 @@ header.sticky .logoLight {
 
     .contenblock {
         padding: 1.5625rem 0;
+    }
+    .photobox {
+        padding: 1.5625rem 0 0;
     }
 }
 
@@ -4676,6 +4687,13 @@ header.sticky .logoLight {
         flex-grow: 1;
     }
 }
+@media (max-width: 374px) {
+    
+
+    .form-control {
+        width: 100%;
+    }
+}
 
 .form-control.full {
     width: 100%;
@@ -4811,7 +4829,7 @@ header.sticky .logoLight {
 }
 
 .advantage {
-    margin-bottom: 3.125rem;
+    margin-bottom: 0;
 }
 
 @media (max-width: 767.98px) {
