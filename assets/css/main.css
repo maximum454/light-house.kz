@@ -4066,7 +4066,14 @@ a:hover {
 .section-4 {
     color: #fff;
     padding: 7.8125rem 0;
-    background: url("../img/extra-bg.jpg") top/cover;
+    background-image: url("../img/bg3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.section-4.exc{
+    background-image: url("../img/bg-exc.jpg");
 }
 
 @media (max-width: 767.98px) {
@@ -4903,7 +4910,7 @@ header.sticky .logoLight {
     font-size: 1rem;
     font-weight: 300;
     margin-bottom: 0;
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, .6);
     width: 100%;
     padding: 4px;
 }
