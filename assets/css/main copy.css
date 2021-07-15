@@ -4090,12 +4090,12 @@ a:hover {
 }
 
 .section-5 {
-    padding: 7.8125rem 0 0;
+    padding: 7.8125rem 0;
 }
 
 @media (max-width: 767.98px) {
     .section-5 {
-        padding: 3rem 0 0;
+        padding: 3rem 0;
     }
 }
 
