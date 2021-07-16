@@ -18287,6 +18287,7 @@ document.addEventListener("DOMContentLoaded", function() {
             $('[data-prepare]').val($(this).text())
             $("input[value='" + val + "']").attr('checked', true);
             quiz.go(1);
+            $('[data-step="0"]').find('[data-quiz-btn="next"]').removeAttr('disabled');
         }
 
         modalityOpen('quiz', false);
