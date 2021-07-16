@@ -4052,7 +4052,7 @@ a:hover {
 
 @media (max-width: 767.98px) {
     .section-1 {
-        padding: 3rem 0;
+        padding: 3.125rem 0;
     }
 }
 
@@ -4066,7 +4066,7 @@ a:hover {
 
 @media (max-width: 767.98px) {
     .section-3 {
-        padding: 3.125rem 0 1.5625rem;
+        padding: 3.125rem 0;
     }
 }
 
@@ -4095,7 +4095,7 @@ a:hover {
 
 @media (max-width: 767.98px) {
     .section-5 {
-        padding: 3rem 0 0;
+        padding: 3.125rem 0 0;
     }
 }
 
@@ -4105,7 +4105,7 @@ a:hover {
 
 @media (max-width: 767.98px) {
     .section-6 {
-        padding: 3rem 0;
+        padding: 5.125rem 0;
     }
 }
 
@@ -4473,7 +4473,7 @@ header.sticky .logoLight {
     color: #fff;
     font-size: 3rem;
     line-height: 1.15;
-    font-weight: 300;
+    font-weight: bold;
     margin-bottom: 0;
 }
 
@@ -4506,6 +4506,8 @@ header.sticky .logoLight {
 .hero-title small {
     display: block;
     font-size: 1.125rem;
+    font-weight: 300;
+    margin-top: 10px;
 }
 
 @media (max-width: 991.98px) {
@@ -4887,6 +4889,8 @@ header.sticky .logoLight {
     height: 0;
     padding-bottom: 60%;
     overflow: hidden;
+    display: block;
+    text-decoration: none;
 }
 
 .portfolio-photo {
