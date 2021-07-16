@@ -4123,6 +4123,13 @@ a:hover {
     margin-bottom: .5rem;
 }
 
+@media (max-width: 767.98px) {
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: .5rem;
+    }
+}
+
 .section-subtitle {
     font-size: 2rem;
     line-height: 1.1;
