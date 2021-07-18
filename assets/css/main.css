@@ -4509,7 +4509,11 @@ header.sticky .logoLight {
         padding: 4px 7px;
     }
 }
-
+@media (max-width:374.98px) {
+    .contact-top {
+        font-size: 14px
+    } 
+}
 .hero-title small {
     display: block;
     font-size: 1.125rem;
