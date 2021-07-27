@@ -37,11 +37,14 @@ foreach ($_POST['steps'] as $key => $step) {
     $step_data_telegram .= $step['title'] . ' - ' . $step['value'] ."\n";
 }
 
+
 $message = "<table style='width: 100%;'>$message</table><br>$steps_data";
 
 
+
+
 $mail = new PHPMailer;
-$mail->addAddress('Yerlan-ali@yandex.ru');
+$mail->addAddress('maximum454@gmail.com');
 //$mail->addAddress('lied@ledcapital.ru');
 //$mail->addAddress('info@ledcapital.ru');
 $mail->Subject = $subject;
@@ -72,6 +75,9 @@ if($mail->send()) {
 
 }else return false;
 
+$mail->ClearAddresses();
+
+
 function message_to_telegram($text)
 {
     $ch = curl_init();
@@ -91,9 +97,6 @@ function message_to_telegram($text)
     );
     curl_exec($ch);
 }
-$mail->ClearAddresses();
-
-
 //Light: 1698168239:AAEEmmlBGkGMu1YQnmdxj4wJReNo9cR0Nyw
 //id_chat: 113185455
 //My: 1902978954:AAElCBiYvwXs2wjGylDvyf1qshNLm1e36rk
