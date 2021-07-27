@@ -18234,21 +18234,22 @@ document.addEventListener("DOMContentLoaded", function() {
         return false;
     });
 
-    $('#quiz').submit(function() {
+    $('#quiz').on('submit', function() {
         var th = $(this),
             url = th.data('action');
 
         if (!maskValidator.call(this)) return false;
         if (th.data().isSubmitted) { return false; }
-
+        
         $.ajax({
                 type: "POST",
                 url: "assets/php/quiz.php",
                 data: th.serialize()
             })
-            .done(function() {
+            .done(function(data) {
                 toastr.success('Ваша заявка отправлена!');
                 modalityClose();
+                console.log(data);
             })
             .fail(function(xhr) {
                 toastr.error('Во время отправки произошла ошибка, попробуйте позже.');

@@ -28,8 +28,7 @@ $message = "<table style='width: 100%;'>$message</table>";
 
 $mail = new PHPMailer;
 // $mail->addAddress('adoonq@gmail.com');
-$mail->addAddress('lied@ledcapital.ru');
-$mail->addAddress('info@ledcapital.ru');
+$mail->addAddress('Yerlan-ali@yandex.ru');
 $mail->Subject = $subject;
 $mail->Body    = $message;
 
