@@ -37,7 +37,6 @@ foreach ($_POST['steps'] as $key => $step) {
     $step_data_telegram .= $step['title'] . ' - ' . $step['value'] ."\n";
 }
 
-
 $message = "<table style='width: 100%;'>$message</table><br>$steps_data";
 
 
@@ -45,11 +44,11 @@ $message = "<table style='width: 100%;'>$message</table><br>$steps_data";
 
 $mail = new PHPMailer;
 $mail->addAddress('maximum454@gmail.com');
-//$mail->addAddress('lied@ledcapital.ru');
-//$mail->addAddress('info@ledcapital.ru');
 $mail->Subject = $subject;
 $mail->Body    = $message;
-
+$file_to_attach = $_FILES['file']['tmp_name'];
+$filename=$_FILES['file']['name'];
+$email->AddAttachment( $file_to_attach , $filename );
 
 // $url = 'https://crm.olivin.ru/static/rec_zayavka/';
 // $params = array(
@@ -84,12 +83,12 @@ function message_to_telegram($text)
     curl_setopt_array(
         $ch,
         array(
-            CURLOPT_URL => 'https://api.telegram.org/bot' . '1698168239:AAEEmmlBGkGMu1YQnmdxj4wJReNo9cR0Nyw' . '/sendMessage',
+            CURLOPT_URL => 'https://api.telegram.org/bot' . '1902978954:AAElCBiYvwXs2wjGylDvyf1qshNLm1e36rk' . '/sendMessage',
             CURLOPT_POST => TRUE,
             CURLOPT_RETURNTRANSFER => TRUE,
             CURLOPT_TIMEOUT => 10,
             CURLOPT_POSTFIELDS => array(
-                'chat_id' => 113185455,
+                'chat_id' => -433517678,
                 'parse_mode' => html,
                 'text' => $text,
             ),
@@ -101,4 +100,3 @@ function message_to_telegram($text)
 //id_chat: 113185455
 //My: 1902978954:AAElCBiYvwXs2wjGylDvyf1qshNLm1e36rk
 //My id_chat: -433517678
-

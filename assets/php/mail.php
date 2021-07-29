@@ -33,7 +33,7 @@ $mail->Subject = $subject;
 $mail->Body    = $message;
 
 
-$url = 'https://crm.olivin.ru/static/rec_zayavka/';
+/* $url = 'https://crm.olivin.ru/static/rec_zayavka/';
 $params = array(
 	'subject' => $subject,
 	'email' => $_POST['email'],
@@ -48,7 +48,7 @@ $result = file_get_contents($url, false, stream_context_create(array(
 		'header'  => 'Content-type: application/x-www-form-urlencoded',
 		'content' => http_build_query($params)
 	)
-)));
+))); */
 
 if($mail->send()) {echo 'success';
 message_to_telegram('Новая заявка с сайта light-house.kz, ' . $_POST['email'] . ' ' .  $_POST['name'] . ' ' . $_POST['phone']);}

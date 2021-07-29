@@ -951,7 +951,7 @@
                         <span class="progress__line" data-progress="line"></span>
                     </div>
                 </div>
-                <form id="quiz" class="form">
+                <form id="quiz" class="form" enctype="multipart/form-data">
                     <input type="hidden" name="steps[0][title]" value="0. Выберите экран">
                     <input type="hidden" name="steps[0][value]" value="Выберите из списка" data-prepare>
                     <fieldset>
@@ -1095,7 +1095,7 @@
                             <label class="form__control">
                                 <span class="input">
                                     <span class="input__label">Прикрепить фото или видео</span>
-                                    <input class="input__field" type="file" multiple name="steps[5][value][start]"
+                                    <input class="input__field" type="file" multiple name="steps[5][value][]"
                                         required>
                                 </span>
                             </label>
@@ -1116,7 +1116,7 @@
                                 <span class="input">
                                     <span class="input__label">Загрузите фото или эскизный проект своего здания (в
                                         хорошем качестве) и мы бесплатно подготовим для Вас дизайн подсветки!</span>
-                                    <input class="input__field" type="file" multiple name="steps[6][value][start]"
+                                    <input class="input__field" type="file" multiple name="steps[6][value][]"
                                         required>
                                 </span>
                             </label>
