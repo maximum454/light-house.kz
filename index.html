@@ -1025,7 +1025,7 @@
                     </fieldset>
                     <fieldset>
                         <legend class="form__legend">3. Цвет(а) освещения</legend>
-                        <input type="hidden" name="steps[3][title]" value="3. Цвет(а) освещения">
+                        <input type="hidden" name="steps[3][title]" value="3. Цвет освещения">
                         <div class="form__content">
                             <div class="form__group">
                                 <label class="form__control radio">
@@ -1089,7 +1089,7 @@
                         <legend class="form__legend">5. Вариант подсветки будет зависеть от бюджета, которым вы
                             располагаете (чем проще подсветка, тем дешевле)</legend>
                         <input type="hidden" name="steps[5][title]"
-                            value="5. Вариант подсветки будет зависеть от бюджета, которым вы располагаете (чем проще подсветка, тем дешевле).">
+                            value="5. Бюджет.">
                         <div class="form__group">
                             <label class="form__control radio">
                                 <input type="radio" name="steps[5][value]" value="менее 1 млн. тенге">
@@ -1131,7 +1131,7 @@
                             </label>
                             <label class="form__control input">
                                 <span class="input__label"><i class="fas fa-phone"></i></span>
-                                <input class="input__field" type="text" name="phone" placeholder="Ваш телефон *"
+                                <input id="phone" class="input__field" type="text" name="phone" placeholder="Ваш телефон *"
                                     required>
                             </label>
                             <label class="form__control input">
@@ -1142,7 +1142,7 @@
                         <div class="form__footer">
                             <button class="form__button" type="button" data-quiz-btn="prev"><i
                                     class="fas fa-chevron-left"></i>&nbsp;&nbsp;Назад</button>
-                            <button class="form__button form__button--accent"><i
+                            <button id="btn-send" class="form__button form__button--accent disabled"><i
                                     class="fas fa-envelope"></i>&nbsp;&nbsp;Отправить</button>
                         </div>
                     </fieldset>
@@ -1202,6 +1202,7 @@
         target="_blank"><img width="64" src="/whatsapp.png" alt="whatsapp" /></a>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.mask.js"></script>
     <script type="text/javascript">
         $(".show-portofilio").click(function () {
             $(this).addClass('d-none');

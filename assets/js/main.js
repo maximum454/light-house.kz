@@ -18179,7 +18179,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // quiz
-    $('[name="phone"]').inputmask('+7 (999) 999-99-99', { "clearIncomplete": true });
+   /*  $('[name="phone"]').inputmask('+7 (999) 999-99-99'); */
+    $('[name="phone"]').mask('+7 (000) 000-00-00');
 
     $('.datepicker-here').datepicker({
         clearButton: true,
@@ -18374,5 +18375,30 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         return true;
     }
+
+
+
+    function psw(){
+        var phoneInput = document.getElementById("phone");
+        var len = false;
+    
+        // Когда пользователь начинает вводить что-то в поле пароля
+        phoneInput.addEventListener('keyup', function(){
+            // Проверить длину
+            console.log(phoneInput.value.length);
+            if(phoneInput.value.length >= 18) {
+                len = true;
+            } else {
+                len = false;
+            }
+            if(len){
+                $('#btn-send').removeClass('disabled')
+            }
+            else{
+                $('#btn-send').addClass('disabled')
+            }
+        })
+    }
+    psw()
 
 });
