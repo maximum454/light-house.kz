@@ -572,11 +572,11 @@ class PHPMailer
 		$this->isSMTP();                                      // Set mailer to use SMTP
 		$this->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 		$this->SMTPAuth = true;                               // Enable SMTP authentication
-		$this->Username = 'lied@led.ru';                 // SMTP username                         // SMTP password
-		$this->From = 'lied@led.ru';
-		$this->Password = 'A1478963Z';  
+		$this->Username = 'info@light-house.kz';                 // SMTP username                         // SMTP password
+		$this->From = 'info@light-house.kz';
+		$this->Password = 'Aliakbar1982100%';  
 		
-		$this->FromName = 'CRM';
+		$this->FromName = 'Light House';
 		
 		$this->CharSet   = "UTF-8";
 		
