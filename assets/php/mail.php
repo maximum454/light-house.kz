@@ -2,10 +2,10 @@
 
 require_once("./mailsender/PHPMailerAutoload.php");
 
-$subject = '[ledcapital.ru] Аренда экранов. '.$_POST['name'].'. '.$_POST['phone'];
+$subject = 'light-house.kz '.$_POST['name'].'. '.$_POST['phone'];
 
 $form_data = array(
-	'Страница'	=> 'Аренда светодиодных экранов',
+	'Страница'	=> 'light-house.kz',
 	'Форма' 		=> $_POST['title'] ?: 'Без названия',
 	'Имя'				=> $_POST['name'] ?: 'Не указано',
 	'Телефон' 	=> $_POST['phone'] ?: 'Не указан'
@@ -28,7 +28,7 @@ $message = "<table style='width: 100%;'>$message</table>";
 
 $mail = new PHPMailer;
 // $mail->addAddress('adoonq@gmail.com');
-$mail->addAddress('Yerlan-ali@yandex.ru');
+$mail->addAddress('info@light-house.kz');
 $mail->Subject = $subject;
 $mail->Body    = $message;
 
