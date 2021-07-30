@@ -29,6 +29,7 @@ foreach ($_POST['steps'] as $key => $step) {
 	if (is_array($step['value'])) {
 		$inner_value = '';
 		foreach ($step['value'] as $title => $value) {
+            $value = $value ?: 'Не указан';
 			$inner_value .= $title.' - '.$value.'; ';
 		}
 		$step['value'] = $inner_value;
@@ -43,7 +44,7 @@ $message = "<table style='width: 100%;'>$message</table><br>$steps_data";
 
 
 $mail = new PHPMailer;
-$mail->addAddress('info@light-house.kz');
+$mail->addAddress('maximum454@gmail.com');
 $mail->Subject = $subject;
 $mail->Body    = $message;
 
@@ -80,12 +81,12 @@ function message_to_telegram($text)
     curl_setopt_array(
         $ch,
         array(
-            CURLOPT_URL => 'https://api.telegram.org/bot' . '1698168239:AAEEmmlBGkGMu1YQnmdxj4wJReNo9cR0Nyw' . '/sendMessage',
+            CURLOPT_URL => 'https://api.telegram.org/bot' . '1902978954:AAElCBiYvwXs2wjGylDvyf1qshNLm1e36rk' . '/sendMessage',
             CURLOPT_POST => TRUE,
             CURLOPT_RETURNTRANSFER => TRUE,
             CURLOPT_TIMEOUT => 10,
             CURLOPT_POSTFIELDS => array(
-                'chat_id' => 113185455,
+                'chat_id' => -433517678,
                 'parse_mode' => html,
                 'text' => $text,
             ),

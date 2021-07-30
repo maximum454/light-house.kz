@@ -267,7 +267,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-auto">
                                     <br>
-                                    <button class="button link link-dark" data-mdlt="mdlt-form">Узнать больше</button>
+                                    <button class="button link link-dark" data-mdlt="mdlt-learnmore">Узнать больше</button>
                                 </div>
                             </div>
 
@@ -894,7 +894,7 @@
                         </p>
                     </div>
                     <br>
-                    <button class="button link link-dark" data-mdlt="mdlt-form">Связаться с нами</button>
+                    <button class="button link link-dark" data-mdlt="mdlt-callme">Связаться с нами</button>
                 </div>
             </div>
         </div>
@@ -1089,7 +1089,7 @@
                         <legend class="form__legend">5. Вариант подсветки будет зависеть от бюджета, которым вы
                             располагаете (чем проще подсветка, тем дешевле)</legend>
                         <input type="hidden" name="steps[5][title]"
-                            value="5. Бюджет.">
+                            value="5. Бюджет">
                         <div class="form__group">
                             <label class="form__control radio">
                                 <input type="radio" name="steps[5][value]" value="менее 1 млн. тенге">
@@ -1155,8 +1155,8 @@
             <button class="modality__close" data-mdlt-close><i class="fas fa-times"></i></button>
             <div class="modality__content">
                 <form class="form form-js">
-                    <input type="hidden" name="title" value="Получить консультацию">
-                    <h3 class="form-title">Получить консультацию</h3>
+                    <input type="hidden" name="title" value="Обратный звонок">
+                    <h3 class="form-title">Обратный звонок</h3>
                     <p class="form-text">Наш специалист свяжется с Вами в ближайшее время</p>
                     <label class="form-label">
                         <span>Ваше имя</span>
@@ -1179,8 +1179,55 @@
             <button class="modality__close" data-mdlt-close><i class="fas fa-times"></i></button>
             <div class="modality__content">
                 <form class="form form-js">
-                    <input type="hidden" name="title" value="Получить консультацию">
+                    <input type="hidden" name="title" value="Получить каталог">
                     <h3 class="form-title">Получить каталог</h3>
+                    <p class="form-text">Наш специалист свяжется с Вами в ближайшее время</p>
+                    <label class="form-label">
+                        <span>Ваше имя</span>
+                        <input class="form-control full" type="text" name="name" placeholder="Имя">
+                    </label>
+                    <label class="form-label">
+                        <span>Ваш телефон</span>
+                        <input class="form-control full" type="text" name="phone" placeholder="Телефон" required>
+                    </label>
+                    <div class="form-footer">
+                        <button class="form-btn button outline">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modality" data-mdlt-name="callme">
+        <div class="modality__dialog modality__dialog--mini">
+            <button class="modality__close" data-mdlt-close><i class="fas fa-times"></i></button>
+            <div class="modality__content">
+                <form class="form form-js">
+                    <input type="hidden" name="title" value="Связаться с нами">
+                    <h3 class="form-title">Связаться с нами</h3>
+                    <p class="form-text">Наш специалист свяжется с Вами в ближайшее время</p>
+                    <label class="form-label">
+                        <span>Ваше имя</span>
+                        <input class="form-control full" type="text" name="name" placeholder="Имя">
+                    </label>
+                    <label class="form-label">
+                        <span>Ваш телефон</span>
+                        <input class="form-control full" type="text" name="phone" placeholder="Телефон" required>
+                    </label>
+                    <div class="form-footer">
+                        <button class="form-btn button outline">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modality" data-mdlt-name="learnmore">
+        <div class="modality__dialog modality__dialog--mini">
+            <button class="modality__close" data-mdlt-close><i class="fas fa-times"></i></button>
+            <div class="modality__content">
+                <form class="form form-js">
+                    <input type="hidden" name="title" value="Узнать больше">
+                    <h3 class="form-title">Узнать больше</h3>
                     <p class="form-text">Наш специалист свяжется с Вами в ближайшее время</p>
                     <label class="form-label">
                         <span>Ваше имя</span>
