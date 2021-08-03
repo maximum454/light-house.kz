@@ -30,7 +30,7 @@ foreach ($_POST['steps'] as $key => $step) {
 		$inner_value = '';
 		foreach ($step['value'] as $title => $value) {
             $value = $value ?: 'Не указан';
-			$inner_value .= $title.' - '.$value.'; ';
+			$inner_value .= "\n   ".$title.' - '.$value.'; ';
 		}
         
 		$step['value'] = $inner_value;
@@ -89,12 +89,12 @@ function message_to_telegram($text)
     curl_setopt_array(
         $ch,
         array(
-            CURLOPT_URL => 'https://api.telegram.org/bot' . '1902978954:AAElCBiYvwXs2wjGylDvyf1qshNLm1e36rk' . '/sendMessage',
+            CURLOPT_URL => 'https://api.telegram.org/bot' . '1698168239:AAEEmmlBGkGMu1YQnmdxj4wJReNo9cR0Nyw' . '/sendMessage',
             CURLOPT_POST => TRUE,
             CURLOPT_RETURNTRANSFER => TRUE,
             CURLOPT_TIMEOUT => 10,
             CURLOPT_POSTFIELDS => array(
-                'chat_id' => -433517678,
+                'chat_id' => 113185455,
                 'parse_mode' => html,
                 'text' => $text,
             ),
