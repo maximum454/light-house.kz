@@ -27,8 +27,7 @@ $message = "<table style='width: 100%;'>$message</table>";
 
 
 $mail = new PHPMailer;
-// $mail->addAddress('adoonq@gmail.com');
-$mail->addAddress('info@light-house.kz');
+//$mail->addAddress('info@light-house.kz');
 $mail->Subject = $subject;
 $mail->Body    = $message;
 
@@ -50,16 +49,16 @@ $result = file_get_contents($url, false, stream_context_create(array(
 	)
 ))); */
 
-if($mail->send()) {echo 'success';
-message_to_telegram('Новая заявка с сайта light-house.kz, ' . $_POST['email'] . ' ' .  $_POST['name'] . ' ' . $_POST['phone']);}
+$nameUser = $_POST['name'] ?: 'Без имени';
+$nameForm = $_POST['title'];
+message_to_telegram('Заявка с сайта light-house.kz' ."\n". "\"".$nameForm . "\"" ."\n Имя: "  .  $nameUser . "\n Телефон: " . $_POST['phone']);
+if($mail->send()) {
+    echo 'success';
+    
+}
 else return false;
 
 $mail->ClearAddresses();
-
-
-
-
-
 
 function message_to_telegram($text)
 {
@@ -79,3 +78,8 @@ function message_to_telegram($text)
     );
     curl_exec($ch);
 }
+
+//Light: 1698168239:AAEEmmlBGkGMu1YQnmdxj4wJReNo9cR0Nyw
+//id_chat: 113185455
+//My: 1902978954:AAElCBiYvwXs2wjGylDvyf1qshNLm1e36rk
+//My id_chat: -433517678
