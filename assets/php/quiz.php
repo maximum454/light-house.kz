@@ -32,8 +32,12 @@ foreach ($_POST['steps'] as $key => $step) {
             $value = $value ?: 'Не указан';
 			$inner_value .= $title.' - '.$value.'; ';
 		}
+        
 		$step['value'] = $inner_value;
 	}
+    if($step['value'] == ''){
+        $step['value'] = 'Не выбрано';
+    }
 	$steps_data .= $step['title'].': '.$step['value'].'<br>';
     $step_data_telegram .= $step['title'] . ' - ' . $step['value'] ."\n";
 }
@@ -65,10 +69,14 @@ $mail->Body    = $message;
 // 	)
 // )));
 
+$nameUser = $_POST['name'] ?: 'Без имени ';
+$emailUser = $_POST['email'] ?: 'Без почты ';
+$nameForm = $_POST['title'];
+message_to_telegram('Получить эскиз подсветки light-house.kz'."\n Почта: " . $emailUser . "\n Имя: " .  $nameUser . "\n Телефон: " . $_POST['phone'] . "\n" . $step_data_telegram);
 
 if($mail->send()) {
     echo 'success';
-    message_to_telegram('Новая заявка с сайта light-house.kz'."\n Почта: ". $_POST['email'] . "\n Имя: " .  $_POST['name'] . "\n Телефон: " . $_POST['phone'] . "\n" . $step_data_telegram);
+    
 
 }else return false;
 
