@@ -18379,25 +18379,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     function psw(){
-        var phoneInput = document.getElementById("phone");
+        let phoneInputs = document.querySelectorAll(".js-phone");
         var len = false;
-    
-        // Когда пользователь начинает вводить что-то в поле пароля
-        phoneInput.addEventListener('keyup', function(){
-            // Проверить длину
-            console.log(phoneInput.value.length);
-            if(phoneInput.value.length >= 18) {
-                len = true;
-            } else {
-                len = false;
-            }
-            if(len){
-                $('#btn-send').removeClass('disabled')
-            }
-            else{
-                $('#btn-send').addClass('disabled')
-            }
-        })
+        for(let phone of phoneInputs){
+            let paretn = phone.closest('.form');
+            // Когда пользователь начинает вводить что-то в поле пароля
+            phone.addEventListener('keyup', function(){
+                // Проверить длину
+                console.log(paretn);
+                if(phone.value.length >= 18) {
+                    len = true;
+                } else {
+                    len = false;
+                }
+                if(len){
+                    paretn.querySelector('.js-send-btn').classList.remove('disabled')
+                }
+                else{
+                    paretn.querySelector('.js-send-btn').classList.add('disabled')
+                }
+            })
+        }
+        
     }
     psw()
 
