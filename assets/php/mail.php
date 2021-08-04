@@ -66,12 +66,12 @@ function message_to_telegram($text)
     curl_setopt_array(
         $ch,
         array(
-            CURLOPT_URL => 'https://api.telegram.org/bot' . '1698168239:AAEEmmlBGkGMu1YQnmdxj4wJReNo9cR0Nyw' . '/sendMessage',
+            CURLOPT_URL => 'https://api.telegram.org/bot' . '1902978954:AAElCBiYvwXs2wjGylDvyf1qshNLm1e36rk' . '/sendMessage',
             CURLOPT_POST => TRUE,
             CURLOPT_RETURNTRANSFER => TRUE,
             CURLOPT_TIMEOUT => 10,
             CURLOPT_POSTFIELDS => array(
-                'chat_id' => 113185455,
+                'chat_id' => -433517678,
                 'text' => $text,
             ),
         )
